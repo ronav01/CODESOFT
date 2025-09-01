@@ -1,0 +1,228 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #ced4da;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container:hover {
+  background-color: #adb5bd;
+}
+.skill-header {
+  border: 2px solid black;
+  padding: 0px 20px 0px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.skill-header:hover {
+  background-color: black;
+  color: #f2f2f2;
+  transition: all ease-in 0.3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.skill-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.box {
+  height: 130px;
+  width: 100px;
+  background-color: #f2f2f2;
+  margin: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.box:hover {
+  transform: scale(1.05);
+  transition: all ease-in 0.3;
+}
+.skill-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.skill-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  padding: 10px;
+}
+.skill-header2 {
+  border: 2px solid black;
+  padding: 0px 20px 0px 20px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.header2 {
+  margin-top: 30px;
+  padding: 0px 20px 0px 20px;
+  border: 2px solid black;
+}
+.header2:hover {
+  background-color: black;
+  color: #f2f2f2;
+  transition: all ease-in 0.3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.learning-skill {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+  margin: 0px 15px 0px 15px;
+}
+@media (max-width: 768px) {
+  .container{
+    padding:5px 30px;
+    height: 100%;
+    width: 100%;
+  }
+  .skill-box {
+    width: 100%;
+  }
+  .learning-skill {
+    width: 100%;
+  }
+  .slider_bar {
+    display: none;
+  }
+  .btn_one {
+    display: none;
+  }
+  .menu-icon i {
+    display: none;
+  }
+}
+
+/* Responsive: devices between 769px and 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container{
+    padding:5px 30px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .skill-header {
+    font-size: 1.15rem;
+    padding: 8px 24px;
+    margin: 14px;
+  }
+
+  .skill-box {
+    width: 85%;
+    gap: 18px;
+    justify-content: space-around;
+  }
+
+  .box {
+    width: 120px;
+    height: 150px;
+    margin: 22px;
+    padding: 12px;
+  }
+
+  .box h3,
+  .box h4 {
+    font-size: 0.95rem;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .skill-img {
+    height: 72%;
+  }
+
+  .skill-img img {
+    padding: 8px;
+  }
+
+  .learning-skill {
+    width: 85%;
+    padding: 8px 12px;
+    margin: 8px auto;
+    gap: 16px;
+  }
+
+  .header2 {
+    font-size: 1.05rem;
+    margin-top: 20px;
+    padding: 6px 18px;
+  }
+
+  /* Slightly larger hover transform so interactions feel snappier on medium screens */
+  .box:hover {
+    transform: scale(1.06);
+  }
+  .skill-header:hover,
+  .header2:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* small phone max-width(600px) */
+@media (max-width: 600px) {
+ .container{
+    padding:5px 30px;
+  }
+   .skill-box {
+    width: 100%;
+  }
+  .learning-skill {
+    width: 100%;
+  }
+  .box {
+    height: 110px;
+    width: 90px;
+    margin: 20px 15px;
+    padding: 8px;
+  }
+}
+@media (max-width:400px) {
+   .container{
+    height: 100%;
+    width: 100%;
+    padding:5px 30px;
+  }
+}

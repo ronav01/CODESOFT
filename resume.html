@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&    family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="logo ronav.png">
+    <style>
+        .resume-section{
+            width: 100%;
+            height: 100%;
+            background-color: #ced4da;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 20px 0px 20px 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .resume-section:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .resume-header{
+            height: 30px;
+            width: 100px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .resume-header h5{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .resume-header h5:hover{
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .resume-header:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        } 
+        .container{
+            width:90%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            align-items: center;
+        }
+        .card1{
+            height: 700px;
+            width: 40%;
+            border-radius: 5px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            justify-content: space-evenly;
+            padding-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card1 h4{
+            font-size: 1.5rem;
+            padding-left: 5px;
+        }
+        .card1 h4:hover{
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .card1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card1:hover .downlod-btn button {
+            background: linear-gradient(135deg, #0056d2, #0041a8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .resume-img{
+            height:90%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+        .resume-img h4{
+            font-size: 1.2rem;
+            padding-left: 5px;
+        }
+        .resume-img img{
+            height: 100%;
+            width: 95%;
+            background-size: cover;
+            object-fit: fill;
+        }
+        .downlod-btn button{
+            width: 200px;
+            border: none;
+            border-radius:3px;
+            background: linear-gradient(135deg, #007bff, #0056d2);
+            color: #f2f2f2;
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .downlod-btn button:hover {
+            background: linear-gradient(135deg, #0056d2, #0041a8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .downlod-btn button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        .img-container{
+            height: 65%;
+            width:70%;
+            background-color: #d9d9d9;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;        
+        }
+
+        .img-container img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            object-fit: fill;
+            border-radius: 10px; 
+        }
+        .informainton{
+            padding:10px 50px 0px 50px;
+        }
+        .informainton h4{
+            font-size: 1.5rem;
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+        .informainton h3{
+         font-size: 1.2rem;
+         padding-left: 5px;
+        }
+        .informainton h3:hover{
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .informainton p{
+            font-size: 0.80rem;
+            color: #212529;
+            font-size:0.80rem;
+            margin: 5px;
+            text-align: justify;
+        }
+        .informainton p:hover{
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .profile-btn{
+            margin-top: 10px;
+        }   
+        .profile-btn button{
+            width: 200px;
+            border: none;
+            border-radius:3px;
+            background: linear-gradient(135deg, #007bff, #0056d2);
+            color: #f2f2f2;
+            margin: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .profile-btn a{
+            text-decoration: none;
+            color: white;
+        }
+        .profile-btn button:hover{
+            background: linear-gradient(135deg, #0056d2, #0041a8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width:768px) {
+            .navbar{
+                position: sticky;
+                top: 0;
+                z-index: 1000 ;
+            }
+            .resume-section{
+                height: 100%;
+                width: 100%;
+                padding: 10px 0px 10px 0px;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap:none;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 100%;
+                width: 100%;
+                padding: 10px 0px 10px 0px; 
+            }
+            .card1{
+                height: 100%;;
+                width: 80%;
+                padding-bottom: 10px;
+                margin: 10px 0px 10px 0px;
+            }
+            .resume-img{
+                height:600px;
+                margin-bottom: 5px;
+                width: 100%;
+            }
+        }
+        /* for small phone (max-width:480px) */
+        @media (max-width:480px) {
+             .navbar{
+                position: sticky;
+                top: 0;
+                z-index: 1000 ;
+            }
+            .card1{
+                height:70%;
+                width: 90%;
+                padding-bottom: 10px;
+                margin: 10px 0px 10px 0px;  
+            }
+            .resume-img{
+               height:100%;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!--start navbar section-->
+        <div class="navbar">
+            <div class="nav-logo">
+                <h3><a href="index.html">Online Portfolio</Portal></a></h3>
+                <h5><a href="index.html">Just Another MY Blog Site</a></h5>
+            </div>
+           <nav>
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="resume.html" class="nav-link">RESUME</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">SKILLS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="resume.html" class="nav-link">ABOUT</a>
+            </nav>
+            <!--start making responsive to small phone -->
+             <div class="menu-box">
+            <input type="checkbox" name="checkbox" id="check">
+            <div class="btn_one">
+                <label for="check" style="color: white;">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+
+            <div class="slider_bar">
+                <div class="logo">
+                    <a href="#">Details</a>
+                </div>
+
+                <div class="btn_two">
+                    <label for="check" style="color: white;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li>
+                           <i class="fa-solid fa-house"></i>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="resume.html">ABOUT ME</a>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-envelope"></i>
+                            <a href="contact.html">Contact Me</a>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-hand-dots"></i>
+                            <a href="skills.html">Skills</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-list-check"></i>
+                            <a href="project.html">Projects</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file"></i>
+                            <a href="resume.html">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="social_media">
+                    <ul>
+                        <a href="https://www.instagram.com/ronav__1/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ronavrox/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/ronavrox"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.youtube.com/ronavrox"><i class="fa-brands fa-youtube"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <!--End navbar section-->
+    </header>
+    <main>
+        <div class="resume-section">
+            <div class="resume-header"><h5>RESUME</h5></div>
+            <div class="container">
+                <div class="card1">
+                    <h4>My Resume</h4>
+                    <div class="resume-img"><img src="resume.png" alt="Resume"></div>
+                    <div class="downlod-btn"><button id="downlodBtn">Downlod Resume</button></div>
+                </div>
+                <div class="card1">
+                    <h4>About Me</h4>
+                    <div class="img-container"><img src="ronav.png" alt=""></div>
+                    <div class="informainton">
+                    <h3>Ronav Rox</h3>
+                    <p>I am a Frontend Developer skilled in HTML, CSS, JS.Learning React & MERN stack. Building responsive UIs. Seeking job/internship in Gurgaon , Bengaluru, or Hyderabad. Open to relocation.</p>
+                     <div class="profile-btn"><button><a href="index.html">Go To Profile</a></button></div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!--Start Footer Section-->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="footer-inner">
+            <!-- Brand / About -->
+            <div class="footer-col footer-brand" aria-label="About">
+                <h3 class="footer-title"><a href="index.html" style="color:inherit; text-decoration:none;">Online Portfolio</a></h3>
+                <p class="footer-description">
+                    Frontend Developer focused on responsive UI, performance and clean code. Building with HTML, CSS, JavaScript and React. Open to opportunities and collaborations.
+                </p>
+
+                <div class="footer-contact" aria-label="Contact details">
+                    <a href="tel:+916204080995" class="contact-item" aria-label="Phone number">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <span>+91 6204080995</span>
+                    </a>
+
+                    <div class="contact-item" aria-label="Preferred locations">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span>Preferred: Hyderabad, Bengaluru, Noida, Delhi, Gurgaon</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick links -->
+            <nav class="footer-col footer-nav" aria-label="Footer quick links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Featured / Recent projects -->
+            <div class="footer-col footer-projects" aria-label="Featured projects">
+                <h4 class="footer-heading">Featured Projects</h4>
+                <ul class="project-list">
+                    <li><a href="project.html#project1">Responsive Portfolio</a></li>
+                    <li><a href="project.html#project2">Todo App (Vanilla JS)</a></li>
+                    <li><a href="project.html#project3">React Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-col footer-newsletter" aria-label="Social">
+                <h4 class="footer-heading">Connect</h4>
+                <p style="margin:0 0 8px 0;font-size:12px;color:#cfe4ff">Follow me for updates and demos.</p>
+
+                <div class="footer-social" aria-label="Social links">
+                    <a href="https://www.instagram.com/ronav__1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ronav-rox-096b77378/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom (kept compact to fit 300px total) -->
+        <div class="footer-bottom" role="contentinfo">
+            <a href="#" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" aria-label="Back to top">
+                <i class="fa-solid fa-angles-up" aria-hidden="true" style="margin-right:6px;"></i>
+                Back to top
+            </a>
+
+            <div class="legal">
+                <p>© <span id="footerYear"></span> Ronav Rox</p>
+                <ul class="legal-links">
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer Section-->
+    <script src="portfolio.js"></script>
+</body>
+</html>

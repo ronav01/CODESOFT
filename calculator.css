@@ -1,0 +1,204 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #DAF0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-height: 600px;
+    width:360px;
+    height: 600px;
+    max-width: 360px;
+    background-color: #f7f8fb;
+    border-radius: 20px;
+}
+/*---- dark Mode -----*/
+.dark-container {
+  background-color: #17181A;
+  color: white;
+}
+
+/* -------- light mode ------*/
+.toggle-them{
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-btn{
+    width: 60px;
+    height:30px;
+    background: #ebebeb;
+    display:inline-block;
+    border-radius: 200px;
+    position: relative;
+    top: 20px;
+    box-shadow: inset 0px 5px 15px rgb(0, 0, 0, 0.4),inset 0px -5px 15px rgb(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+.toggle-ball{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f7f8fb;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3 ease;
+    z-index: 2;
+}
+#dark-toggle{
+    display: none;
+}
+input[type="checkbox"]:checked + label .toggle-ball{
+    background-color: #424242;
+    left: 30px;
+}
+/*---- icon -----*/
+.sun-icon i{
+    position: relative;
+    top:6.5px;
+    left: 3px;
+    z-index: 1;
+}
+.moon-icon i{
+    position: relative;
+    top: 5px;
+    left: 13px;
+    z-index: 1;
+}
+.sun-icon, .moon-icon{
+    transition: opacity 0.3s ease;
+}
+#dark-toggle:checked + .toggle-btn .sun-icon{
+    opacity: 0.3;
+}
+#dark-toggle:checked + .toggle-btn .moon-icon{
+    opacity: 1;
+}
+#dark-toggle:checked + .toggle-btn{
+    background: linear-gradient(to right,#333,#777);
+}
+
+/* ----- calcuator ------*/
+.calculator{
+    width: 100%;
+    height: 90%;
+}
+input.display{
+    height: 25%;
+    width: 100%;
+    border: none;
+    text-align: right;
+    font-size: 2rem;
+    background-color:transparent;
+}
+input.display:focus{
+    display: none;
+}
+input::placeholder{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px;
+    margin: 5px;
+    color: #424242;
+}
+
+/* dark placholder */
+.white-color::placeholder{
+    color: #ffffff;
+}
+
+input[type="button"]{
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    margin:8px 8px 8px 12px;
+    padding:5px;
+    border: none;
+    border-radius:15px;
+    background:#ffffff;
+    color: #38b9ff;
+    font-size: 1rem;
+    box-shadow: #424242;
+}
+
+input.operator{
+    background: #ADE2FF;
+    color: #109DFF;
+}
+
+/*---- dark btn ----*/
+.dark-operator {
+  background-color: #303136;
+  color: #29A8FF;
+}
+
+
+.btn-operator{
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+}
+.btn-number{
+     display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+}
+input.zero{
+    width: 150px;
+}
+.zero2{
+    display: none;
+}
+/*--- dark mode ---*/
+
+@media (max-width:500px) {
+    .container{
+        height:350px;
+        width: 200px;
+    }
+    input[type="button"]{
+       height:30px;
+       width:30px;
+       padding:0px;
+       font-size: 12px;
+    }
+    .zero2{
+        display: block;
+    }
+    .toggle-btn{
+        width: 50px;
+        height:25px; 
+        position: relative;
+        left:1px;
+    }
+    .toggle-ball{
+        width:20px;
+        height: 20px;
+    }
+
+
+.sun-icon i{
+    position: relative;
+    top:2px;
+    left:2px;
+    font-size: 13px;
+}
+.moon-icon i{
+    position: relative;
+    top: 2px;
+    left: 10px;
+    font-size: 13px;
+}
+}

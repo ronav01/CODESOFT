@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+            <div class="toggle-them">
+                <div class="toggle-mode">
+                <input type="checkbox" id="dark-toggle"/>
+                <label for="dark-toggle" class="toggle-btn">
+                    <span class="toggle-ball">
+                    </span>
+                    <span class="sun-icon"><i class="fa-solid fa-sun"></i></span>
+                    <span class="moon-icon"><i class="fa-solid fa-moon"></i></span>
+                </label>
+                </div>   
+            </div>
+        <div class="calculator">
+        <input type="text" placeholder="0" class="display">
+
+        <div class="btn-operator">
+            <input type="button" value="Ac" class="operator">
+            <input type="button" value="%" class="operator">
+            <input type="button" value="DL" class="operator">
+            <input type="button" value="/" class="operator">
+        </div>
+        
+        <div class="btn-number row">
+            <input type="button" value="7" >
+            <input type="button" value="8" >
+            <input type="button" value="9" >
+            <input type="button" value="x" class="operator">
+        </div>
+
+          <div class="btn-number row">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6" >
+            <input type="button" value="-" class="operator">
+        </div>
+
+          <div class="btn-number">
+            <input type="button" value="1" >
+            <input type="button" value="2" >
+            <input type="button" value="3" >
+            <input type="button" value="+" class="operator">
+        </div>
+        <div class="btn-number">
+            <input type="button" value="0" class="zero" >
+            <input type="button" value="00" class="zero2">
+            <input type="button" value="."  >
+            <input type="button" value="=" class="operator">
+        </div>
+
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

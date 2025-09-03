@@ -226,3 +226,69 @@
     padding:5px 30px;
   }
 }
+/* for too small phone (max-width:400px)*/
+@media (max-width: 400px) {
+  .navbar{
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+  }
+  .navbar{
+    display: flex;
+    justify-content:end;
+  }
+  .nav-logo{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav-logo h3{
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 15px;
+    padding-top: 3px;
+  }
+  .nav-logo h5{
+    font-size: 6px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 8px;
+    padding-top: 0px;
+  }
+  .nav-logo{
+    display:flex;
+  }
+
+  .btn_one {
+    display: block;
+    position: fixed;
+  }
+  nav {
+    display: none;
+  }
+  .logo-shape {
+    height: 70%;
+    width: 100%;
+  }
+  .slider_bar {
+    position: fixed;
+    display: block;
+  }
+  .btn_one {
+    position: fixed;;
+    display: block;
+  }
+  .menu-icon i {
+    position: fixed;
+    display: block;
+  }
+}

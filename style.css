@@ -199,16 +199,23 @@ nav a:hover {
 .slider_bar {
   position: fixed;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.121);
+  background-color: #1b1b1b;
   width: 25%;
   left: -400px;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
 }
 .slider_bar .logo {
   position: absolute;
   width: 100%;
   line-height: 60px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  height: 60px;
+  background-color: #1b1b1b;
+  transition: all 0.5s ease;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 .slider_bar .logo a {
   position: absolute;
@@ -216,6 +223,23 @@ nav a:hover {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
+}
+.slider_bar .menu-icon i {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+.slider_bar .btn_two {
+  position: absolute;
+  line-height: 60px;
+  left: 20px;
+  top: 0px;
+  font-weight: 500;
+  font-size: 30px;
+  cursor: pointer;
 }
 .slider_bar .btn_two i {
   font-size: 20px;
@@ -225,6 +249,9 @@ nav a:hover {
   top: 2px;
   color: gray;
   /* opacity: 0; */
+}
+.slider_bar .btn_two i:hover {
+  transition: all ease-in 0.3s;
 }
 .slider_bar .menu {
   width: 100%;
@@ -243,6 +270,11 @@ nav a:hover {
   padding-left: 10px;
   text-decoration: none;
 }
+.slider_bar .menu a:hover {
+  color: rgb(66, 66, 244);
+  transition: all ease-in 0.3s;
+  outline: none;
+}
 .social_media {
   position: absolute;
   bottom: 25px;
@@ -251,6 +283,7 @@ nav a:hover {
 .social_media i {
   color: gray;
   padding: 5px;
+  font-size: 20px;
 }
 #check {
   display: none;
@@ -654,4 +687,3 @@ nav a:hover {
   max-height: calc(100% - 0px);
   box-sizing: border-box;
 }
-

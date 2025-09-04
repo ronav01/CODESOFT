@@ -157,3 +157,4 @@ let navLink = document.querySelectorAll(".nav-link");
 navLink.forEach(link => {
   link.style.textTransform = "uppercase";
 });
+
